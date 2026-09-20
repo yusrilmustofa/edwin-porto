@@ -1,28 +1,54 @@
 {
-  "name": "Edwin",
+  "name": "Al Amin Edwinda Putra",
   "hero": {
     "greeting": "Halo, saya Edwin 👋",
-    "headline": "Health Promoter &",
+    "headline": "Health Promotor &",
     "highlight": "Public Health Educator",
-    "description": "Lulusan Promosi Kesehatan Poltekkes Kemenkes Malang yang berkomitmen mengubah informasi kesehatan menjadi edukasi yang mudah dipahami, menyentuh, dan mendorong perubahan perilaku hidup sehat di masyarakat.",
+    "description": "Lulusan Promosi Kesehatan Poltekkes Kemenkes Malang yang memiliki ketertarikan dalam edukasi kesehatan, komunikasi, dan pengembangan media promosi kesehatan untuk mendorong masyarakat menerapkan perilaku hidup sehat.",
     "cta_portfolio": "Lihat Portofolio",
     "cta_contact": "Hubungi Saya",
-    "photo": ""
+    "photo": "images/foto-1789884998879.jpg"
   },
   "about": {
     "title": "Tentang Saya",
     "intro": "Saya Edwin, lulusan Promosi Kesehatan Poltekkes Kemenkes Malang. Saya percaya kesehatan yang baik dimulai dari pengetahuan yang tepat dan lingkungan yang mendukung. Karena itu, saya fokus pada empat hal:",
     "items": [
-      { "title": "Promosi Kesehatan", "text": "Merancang program yang berbasis kebutuhan dan perilaku sasaran." },
-      { "title": "Advokasi", "text": "Mendorong dukungan pemangku kepentingan untuk kebijakan sehat." },
-      { "title": "Media Edukasi Kesehatan", "text": "Leaflet, poster, infografis, dan video yang jelas dan menarik." },
-      { "title": "Pemberdayaan Masyarakat", "text": "Melibatkan warga sebagai pelaku utama perubahan kesehatan." }
+      {
+        "title": "Promosi Kesehatan",
+        "text": "Merancang program yang berbasis kebutuhan dan perilaku sasaran."
+      },
+      {
+        "title": "Advokasi",
+        "text": "Mendorong dukungan pemangku kepentingan untuk kebijakan sehat."
+      },
+      {
+        "title": "Media Edukasi Kesehatan",
+        "text": "Leaflet, poster, infografis, dan video yang jelas dan menarik."
+      },
+      {
+        "title": "Pemberdayaan Masyarakat",
+        "text": "Melibatkan warga sebagai pelaku utama perubahan kesehatan."
+      }
     ]
   },
   "skills": {
     "title": "Keahlian",
-    "hard": ["Perencanaan Program Promkes", "Desain Leaflet", "Desain Poster", "Infografis", "Produksi Video Edukasi", "Komunikasi Publik", "Riset Kesehatan Masyarakat"],
-    "soft": ["Komunikasi Interpersonal", "Kerja Sama Tim", "Empati", "Pemikiran Kritis", "Kepemimpinan"]
+    "hard": [
+      "Perencanaan Program Promkes",
+      "Desain Leaflet",
+      "Desain Poster",
+      "Infografis",
+      "Produksi Video Edukasi",
+      "Komunikasi Publik",
+      "Riset Kesehatan Masyarakat"
+    ],
+    "soft": [
+      "Komunikasi Interpersonal",
+      "Kerja Sama Tim",
+      "Empati",
+      "Pemikiran Kritis",
+      "Kepemimpinan"
+    ]
   },
   "projects": {
     "title": "Portofolio",
@@ -61,9 +87,21 @@
   "experience": {
     "title": "Pengalaman & Pendidikan",
     "items": [
-      { "period": "[Tahun masuk] – [Tahun lulus]", "title": "Poltekkes Kemenkes Malang", "desc": "Jurusan Promosi Kesehatan" },
-      { "period": "[Periode]", "title": "[Magang / Praktik Kerja Lapangan]", "desc": "[Instansi, mis. Puskesmas / Dinas Kesehatan] — [uraian tugas singkat]" },
-      { "period": "[Periode]", "title": "[Organisasi / Kepanitiaan]", "desc": "[Jabatan dan kontribusi]" }
+      {
+        "period": "[Tahun masuk] – [Tahun lulus]",
+        "title": "Poltekkes Kemenkes Malang",
+        "desc": "Jurusan Promosi Kesehatan"
+      },
+      {
+        "period": "[Periode]",
+        "title": "[Magang / Praktik Kerja Lapangan]",
+        "desc": "[Instansi, mis. Puskesmas / Dinas Kesehatan] — [uraian tugas singkat]"
+      },
+      {
+        "period": "[Periode]",
+        "title": "[Organisasi / Kepanitiaan]",
+        "desc": "[Jabatan dan kontribusi]"
+      }
     ]
   },
   "contact": {
