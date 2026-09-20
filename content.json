@@ -1,0 +1,115 @@
+{
+  "name": "Yusril",
+  "hero": {
+    "greeting": "Halo, saya Edwin 👋",
+    "headline": "Health Promoter &",
+    "highlight": "Public Health Educator",
+    "description": "Lulusan Promosi Kesehatan Poltekkes Kemenkes Malang yang berkomitmen mengubah informasi kesehatan menjadi edukasi yang mudah dipahami, menyentuh, dan mendorong perubahan perilaku hidup sehat di masyarakat.",
+    "cta_portfolio": "Lihat Portofolio",
+    "cta_contact": "Hubungi Saya",
+    "photo": ""
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "intro": "Saya Edwin, lulusan Promosi Kesehatan Poltekkes Kemenkes Malang. Saya percaya kesehatan yang baik dimulai dari pengetahuan yang tepat dan lingkungan yang mendukung. Karena itu, saya fokus pada empat hal:",
+    "items": [
+      {
+        "title": "Promosi Kesehatan",
+        "text": "Merancang program yang berbasis kebutuhan dan perilaku sasaran."
+      },
+      {
+        "title": "Advokasi",
+        "text": "Mendorong dukungan pemangku kepentingan untuk kebijakan sehat."
+      },
+      {
+        "title": "Media Edukasi Kesehatan",
+        "text": "Leaflet, poster, infografis, dan video yang jelas dan menarik."
+      },
+      {
+        "title": "Pemberdayaan Masyarakat",
+        "text": "Melibatkan warga sebagai pelaku utama perubahan kesehatan."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Keahlian",
+    "hard": [
+      "Perencanaan Program Promkes",
+      "Desain Leaflet",
+      "Desain Poster",
+      "Infografis",
+      "Produksi Video Edukasi",
+      "Komunikasi Publik",
+      "Riset Kesehatan Masyarakat"
+    ],
+    "soft": [
+      "Komunikasi Interpersonal",
+      "Kerja Sama Tim",
+      "Empati",
+      "Pemikiran Kritis",
+      "Kepemimpinan"
+    ]
+  },
+  "projects": {
+    "title": "Portofolio",
+    "note": "",
+    "items": [
+      {
+        "tag": "Kampanye",
+        "title": "Kampanye PHBS",
+        "description": "Kampanye Perilaku Hidup Bersih dan Sehat: cuci tangan pakai sabun, sanitasi, dan kebiasaan sehat di [sekolah/desa/lokasi].",
+        "role": "[Koordinator / Perancang materi / Fasilitator]",
+        "impact": "[mis. menjangkau 200 siswa, peningkatan pengetahuan 30%]"
+      },
+      {
+        "tag": "Media Edukasi",
+        "title": "Media Edukasi Stunting",
+        "description": "Leaflet, poster, dan infografis pencegahan stunting: gizi seimbang, 1000 HPK, dan pola asuh untuk [ibu hamil/balita].",
+        "role": "[Desainer & penyusun materi]",
+        "impact": "[mis. 150 leaflet dibagikan, dipakai di Posyandu]"
+      },
+      {
+        "tag": "Pemberdayaan",
+        "title": "Program Pemberdayaan Masyarakat",
+        "description": "Pelatihan kader dan penggerak kesehatan agar warga mampu mengidentifikasi dan menyelesaikan masalah kesehatan di [wilayah].",
+        "role": "[Fasilitator / Anggota tim]",
+        "impact": "[mis. 20 kader terlatih, terbentuk kelompok aktif]"
+      },
+      {
+        "tag": "Digital",
+        "title": "Konten Video Edukasi Kesehatan",
+        "description": "Video pendek edukasi kesehatan untuk media sosial tentang [topik: gizi, kesehatan remaja, dll.].",
+        "role": "[Penulis naskah / Editor / Presenter]",
+        "impact": "[mis. 5.000 views, 300 interaksi]"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Pengalaman & Pendidikan",
+    "items": [
+      {
+        "period": "[Tahun masuk] – [Tahun lulus]",
+        "title": "Poltekkes Kemenkes Malang",
+        "desc": "Jurusan Promosi Kesehatan"
+      },
+      {
+        "period": "[Periode]",
+        "title": "[Magang / Praktik Kerja Lapangan]",
+        "desc": "[Instansi, mis. Puskesmas / Dinas Kesehatan] — [uraian tugas singkat]"
+      },
+      {
+        "period": "[Periode]",
+        "title": "[Organisasi / Kepanitiaan]",
+        "desc": "[Jabatan dan kontribusi]"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "intro": "Tertarik berkolaborasi atau punya lowongan yang sesuai? Kirim pesan — saya senang berdiskusi.",
+    "email": "EMAIL_ANDA@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/USERNAME",
+    "instagram": "https://www.instagram.com/USERNAME"
+  },
+  "footer": "Edwin — Promosi Kesehatan, Poltekkes Kemenkes Malang"
+}
