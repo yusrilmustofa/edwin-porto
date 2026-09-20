@@ -1,0 +1,11 @@
+/* Scroll reveal: arah ditentukan data-anim (default: naik) */
+.reveal{opacity:0;transform:translateY(48px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal[data-anim=left]{transform:translateX(-64px)}
+.reveal[data-anim=right]{transform:translateX(64px)}
+.reveal[data-anim=zoom]{transform:scale(.85)}
+.reveal.show{opacity:1;transform:none}
+#progress{transform-origin:left;transform:scaleX(0)}
+#hero-photo>*{animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+section[id]{scroll-margin-top:4rem}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}#hero-photo>*{animation:none}}

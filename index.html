@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edwin — Health Promoter</title>
+<meta name="description" content="Portofolio Edwin, Health Promoter & Public Health Educator lulusan Promosi Kesehatan Poltekkes Kemenkes Malang.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAV -->
+<header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur border-b border-emerald-100">
+  <div id="progress" class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-emerald-500 to-sky-500"></div>
+  <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" aria-label="Utama">
+    <a href="#home" class="font-extrabold text-xl text-emerald-700"><span id="nav-name"></span><span class="text-sky-600">.</span></a>
+    <button id="burger" class="md:hidden p-2 rounded text-slate-700" aria-label="Buka menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <ul id="menu" class="hidden md:flex absolute md:static top-16 inset-x-0 flex-col md:flex-row gap-1 md:gap-6 bg-white md:bg-transparent p-4 md:p-0 border-b md:border-0 border-emerald-100 text-sm font-medium">
+      <li><a class="block py-2 hover:text-emerald-600" href="#about">Tentang</a></li>
+      <li><a class="block py-2 hover:text-emerald-600" href="#skills">Keahlian</a></li>
+      <li><a class="block py-2 hover:text-emerald-600" href="#projects">Portofolio</a></li>
+      <li><a class="block py-2 hover:text-emerald-600" href="#experience">Pengalaman</a></li>
+      <li><a class="block py-2 px-4 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 text-center" href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="pt-32 pb-20 bg-gradient-to-br from-emerald-50 via-white to-sky-50">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div class="reveal" data-anim="left">
+      <p id="hero-greeting" class="text-emerald-700 font-semibold mb-3"></p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight"><span id="hero-headline"></span> <span id="hero-highlight" class="text-emerald-600"></span></h1>
+      <p id="hero-desc" class="mt-5 text-lg text-slate-600"></p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a id="cta-portfolio" href="#projects" class="px-6 py-3 rounded-full bg-emerald-600 text-white font-semibold shadow hover:bg-emerald-700 transition"></a>
+        <a id="cta-contact" href="#contact" class="px-6 py-3 rounded-full border-2 border-sky-600 text-sky-700 font-semibold hover:bg-sky-600 hover:text-white transition"></a>
+      </div>
+    </div>
+    <div id="hero-photo" class="reveal flex justify-center" data-anim="zoom"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20">
+  <div class="max-w-4xl mx-auto px-4 reveal">
+    <h2 id="about-title" class="text-3xl font-bold text-slate-900"></h2>
+    <div class="mt-2 h-1 w-16 bg-emerald-500 rounded"></div>
+    <p id="about-intro" class="mt-6 text-lg leading-relaxed"></p>
+    <div id="about-items" class="mt-6 grid sm:grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 reveal">
+    <h2 id="skills-title" class="text-3xl font-bold text-slate-900"></h2>
+    <div class="mt-2 h-1 w-16 bg-emerald-500 rounded"></div>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100">
+        <h3 class="font-semibold text-lg text-emerald-700 mb-4">Hard Skills</h3>
+        <ul id="skills-hard" class="flex flex-wrap gap-2 text-sm"></ul>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+        <h3 class="font-semibold text-lg text-sky-700 mb-4">Soft Skills</h3>
+        <ul id="skills-soft" class="flex flex-wrap gap-2 text-sm"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20">
+  <div class="max-w-6xl mx-auto px-4 reveal">
+    <h2 id="proj-title" class="text-3xl font-bold text-slate-900"></h2>
+    <div class="mt-2 h-1 w-16 bg-emerald-500 rounded"></div>
+    <p id="proj-note" class="mt-4 text-slate-500"></p>
+    <div id="proj-items" class="mt-8 grid md:grid-cols-2 gap-6"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4 reveal">
+    <h2 id="exp-title" class="text-3xl font-bold text-slate-900"></h2>
+    <div class="mt-2 h-1 w-16 bg-emerald-500 rounded"></div>
+    <ol id="exp-items" class="mt-8 border-l-2 border-emerald-200 space-y-8 pl-6"></ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20">
+  <div class="max-w-4xl mx-auto px-4 reveal">
+    <h2 id="contact-title" class="text-3xl font-bold text-slate-900"></h2>
+    <div class="mt-2 h-1 w-16 bg-emerald-500 rounded"></div>
+    <p id="contact-intro" class="mt-4"></p>
+    <div class="mt-8 grid md:grid-cols-2 gap-8">
+      <form id="form" class="space-y-4">
+        <div><label for="n" class="block text-sm font-medium mb-1">Nama</label>
+          <input id="n" required class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"></div>
+        <div><label for="e" class="block text-sm font-medium mb-1">Email</label>
+          <input id="e" type="email" required class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"></div>
+        <div><label for="m" class="block text-sm font-medium mb-1">Pesan</label>
+          <textarea id="m" rows="4" required class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea></div>
+        <button class="px-6 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition">Kirim Pesan</button>
+      </form>
+      <div id="contact-links" class="space-y-3"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="py-6 text-center text-sm text-slate-500 border-t border-slate-100">
+  © <span id="yr"></span> <span id="footer"></span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
