@@ -60,7 +60,10 @@
         "description": "E-Book, Video Interaktif, Leaflet, Poster, dan Infografis",
         "role": "media alat bantu edukasi visual dan cetak/digital untuk menyampaikan pesan secara efektif, menarik perhatian, dan mempermudah pemahaman sasaran.",
         "impact": "Mudah dibawa pulang oleh sasaran edukasi, sehingga berpotensi dibaca ulang di rumah atau dibagikan ke anggota keluarga lain serta mendorong respons atau aksi segera dari pembaca karena informasinya bersifat aplikatif.",
-        "images": []
+        "images": [
+          "",
+          ""
+        ]
       }
     ]
   },
