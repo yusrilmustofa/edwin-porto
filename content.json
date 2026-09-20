@@ -15,23 +15,19 @@
     "items": [
       {
         "title": "Promosi Kesehatan",
-        "text": "Merancang program kesehatan yang berbasis dengan kebutuhan masyarakat agar mendorong perubahan perilaku positif demi meningkatkan kualitas kesehatan individu maupun lingkungan."
+        "text": "Merancang program yang berbasis kebutuhan dan perilaku sasaran."
       },
       {
         "title": "Advokasi",
-        "text": "Pendekatan kepada para pemangku kebijakan atau pengambil keputusan agar memberikan dukungan berupa kebijakan publik yang berwawasan dengan program kesehatan."
+        "text": "Mendorong dukungan pemangku kepentingan untuk kebijakan sehat."
       },
       {
         "title": "Media Edukasi Kesehatan",
-        "text": "Leaflet, poster, infografis, dan video untuk menyampaikan pesan kesehatan secara jelas, menarik, dan mudah dipahami guna meningkatkan pengetahuan serta mengubah perilaku masyarakat ke arah yang lebih sehat."
+        "text": "Leaflet, poster, infografis, dan video yang jelas dan menarik."
       },
       {
         "title": "Pemberdayaan Masyarakat",
-        "text": "Meningkatkan pengetahuan, kesadaran, dan kemampuan masyarakat agar berperan aktif dalam upaya kesehatan."
-      },
-      {
-        "title": "Bina Suasana ",
-        "text": "Menciptakan lingkungan yang mendukung masyarakat untuk berperilaku sehat dengan melibatkan berbagai pihak."
+        "text": "Melibatkan warga sebagai pelaku utama perubahan kesehatan."
       }
     ]
   },
@@ -43,19 +39,15 @@
       "Desain Poster",
       "Infografis",
       "Produksi Video Edukasi",
-      "Riset Kesehatan Masyarakat",
-      "Analisis Data & Statistik",
-      "Pengelolaan Media Sosial"
+      "Komunikasi Publik",
+      "Riset Kesehatan Masyarakat"
     ],
     "soft": [
       "Komunikasi Interpersonal",
       "Kerja Sama Tim",
       "Empati",
       "Pemikiran Kritis",
-      "Kepemimpinan",
-      "Public Speaking",
-      "Advokasi",
-      "Manajemen Waktu"
+      "Kepemimpinan"
     ]
   },
   "projects": {
@@ -67,36 +59,45 @@
         "title": "Kampanye PHBS",
         "description": "Kampanye Perilaku Hidup Bersih dan Sehat: cuci tangan pakai sabun, sanitasi, dan kebiasaan sehat di [sekolah/desa/lokasi].",
         "role": "[Koordinator / Perancang materi / Fasilitator]",
-        "impact": "[mis. menjangkau 200 siswa, peningkatan pengetahuan 30%]"
+        "impact": "[mis. menjangkau 200 siswa, peningkatan pengetahuan 30%]",
+        "images": []
       },
       {
         "tag": "Media Edukasi",
         "title": "Media Edukasi Stunting",
         "description": "Leaflet, poster, dan infografis pencegahan stunting: gizi seimbang, 1000 HPK, dan pola asuh untuk [ibu hamil/balita].",
         "role": "[Desainer & penyusun materi]",
-        "impact": "[mis. 150 leaflet dibagikan, dipakai di Posyandu]"
+        "impact": "[mis. 150 leaflet dibagikan, dipakai di Posyandu]",
+        "images": []
       },
       {
         "tag": "Pemberdayaan",
         "title": "Program Pemberdayaan Masyarakat",
         "description": "Pelatihan kader dan penggerak kesehatan agar warga mampu mengidentifikasi dan menyelesaikan masalah kesehatan di [wilayah].",
         "role": "[Fasilitator / Anggota tim]",
-        "impact": "[mis. 20 kader terlatih, terbentuk kelompok aktif]"
+        "impact": "[mis. 20 kader terlatih, terbentuk kelompok aktif]",
+        "images": []
       },
       {
         "tag": "Digital",
         "title": "Konten Video Edukasi Kesehatan",
         "description": "Video pendek edukasi kesehatan untuk media sosial tentang [topik: gizi, kesehatan remaja, dll.].",
         "role": "[Penulis naskah / Editor / Presenter]",
-        "impact": "[mis. 5.000 views, 300 interaksi]"
+        "impact": "[mis. 5.000 views, 300 interaksi]",
+        "images": [
+          "images/foto-1789885715261.jpg",
+          "images/foto-1789885726424.jpg",
+          "images/foto-1789885738918.jpg",
+          "images/foto-1789885748501.jpg"
+        ]
       }
     ]
   },
   "experience": {
-    "title": "Pendidikan & Pengalaman  ",
+    "title": "Pengalaman & Pendidikan",
     "items": [
       {
-        "period": "[Tahun masuk] – [Tahun lulus]",
+        "period": "[2022] – [2026]",
         "title": "Poltekkes Kemenkes Malang",
         "desc": "Jurusan Promosi Kesehatan"
       },
@@ -109,6 +110,11 @@
         "period": "[Periode]",
         "title": "[Organisasi / Kepanitiaan]",
         "desc": "[Jabatan dan kontribusi]"
+      },
+      {
+        "period": "",
+        "title": "",
+        "desc": ""
       }
     ]
   },
