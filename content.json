@@ -102,19 +102,19 @@
         "desc": "Jurusan Promosi Kesehatan"
       },
       {
-        "period": "[Periode]",
-        "title": "[Magang / Praktik Kerja Lapangan]",
-        "desc": "[Instansi, mis. Puskesmas / Dinas Kesehatan] — [uraian tugas singkat]"
-      },
-      {
-        "period": "[Periode]",
-        "title": "[Organisasi / Kepanitiaan]",
-        "desc": "[Jabatan dan kontribusi]"
+        "period": "27 Januari - 14 Februari 2025",
+        "title": "Praktik Kerja Lapangan 1",
+        "desc": "Puskesmas Dinoyo"
       },
       {
         "period": "",
         "title": "",
         "desc": ""
+      },
+      {
+        "period": "[Periode]",
+        "title": "[Organisasi / Kepanitiaan]",
+        "desc": "[Jabatan dan kontribusi]"
       }
     ]
   },
