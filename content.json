@@ -84,12 +84,7 @@
         "description": "Video pendek edukasi kesehatan untuk media sosial tentang [topik: gizi, kesehatan remaja, dll.].",
         "role": "[Penulis naskah / Editor / Presenter]",
         "impact": "[mis. 5.000 views, 300 interaksi]",
-        "images": [
-          "images/foto-1789885715261.jpg",
-          "images/foto-1789885726424.jpg",
-          "images/foto-1789885738918.jpg",
-          "images/foto-1789885748501.jpg"
-        ]
+        "images": []
       },
       {
         "tag": "",

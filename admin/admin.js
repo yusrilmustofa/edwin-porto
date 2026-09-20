@@ -1,4 +1,4 @@
-const API = '/.netlify/functions/admin';
+const API = '/api/admin';
 const $ = s => document.querySelector(s);
 const el = (t, c = '', h = '') => { const e = document.createElement(t); e.className = c; e.innerHTML = h; return e; };
 const LBL = { name: 'Nama', hero: 'Bagian Atas (Hero)', about: 'Tentang Saya', skills: 'Keahlian', projects: 'Portofolio', experience: 'Pengalaman & Pendidikan', contact: 'Kontak',
