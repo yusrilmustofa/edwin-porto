@@ -23,7 +23,8 @@ function render(c){
   $('#skills-hard').innerHTML=chips(s.hard,'emerald'); $('#skills-soft').innerHTML=chips(s.soft,'sky');
 
   txt('#proj-title',p.title); txt('#proj-note',p.note); $('#proj-note').hidden=!p.note;
-  $('#proj-items').innerHTML=p.items.map((i,n)=>`<article class="p-6 rounded-2xl border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition"><span class="text-xs font-semibold uppercase text-${tone(n)}-600">${esc(i.tag)}</span><h3 class="mt-1 text-xl font-bold text-slate-900">${esc(i.title)}</h3><p class="mt-2 text-sm">${esc(i.description)}</p><p class="mt-3 text-sm"><strong>Peran:</strong> ${esc(i.role)}</p><p class="mt-1 text-sm"><strong>Dampak:</strong> ${esc(i.impact)}</p></article>`).join('');
+  const slides=(im,t)=>im&&im.length?`<div class="slider relative -mx-6 -mt-6 mb-5 overflow-hidden rounded-t-2xl"><div class="track flex overflow-x-auto snap-x snap-mandatory">${im.map(s=>`<img src="${esc(s)}" alt="${esc(t)}" loading="lazy" class="w-full shrink-0 snap-center aspect-video object-cover">`).join('')}</div>${im.length>1?`<button type="button" class="prev absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-white hover:bg-black/60" aria-label="Sebelumnya">‹</button><button type="button" class="next absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-white hover:bg-black/60" aria-label="Berikutnya">›</button><div class="absolute bottom-2 inset-x-0 flex justify-center gap-1.5">${im.map(()=>'<span class="dot w-2 h-2 rounded-full cursor-pointer"></span>').join('')}</div>`:''}</div>`:'';
+  $('#proj-items').innerHTML=p.items.map((i,n)=>`<article class="p-6 rounded-2xl border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition">${slides(i.images,i.title)}<span class="text-xs font-semibold uppercase text-${tone(n)}-600">${esc(i.tag)}</span><h3 class="mt-1 text-xl font-bold text-slate-900">${esc(i.title)}</h3><p class="mt-2 text-sm">${esc(i.description)}</p><p class="mt-3 text-sm"><strong>Peran:</strong> ${esc(i.role)}</p><p class="mt-1 text-sm"><strong>Dampak:</strong> ${esc(i.impact)}</p></article>`).join('');
 
   txt('#exp-title',x.title);
   $('#exp-items').innerHTML=x.items.map((i,n)=>`<li class="relative"><span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full ${n?'bg-sky-500':'bg-emerald-500'} ring-4 ring-white"></span><p class="text-sm text-slate-500">${esc(i.period)}</p><h3 class="font-bold text-slate-900">${esc(i.title)}</h3><p class="text-sm">${esc(i.desc)}</p></li>`).join('');
@@ -57,7 +58,26 @@ function animate(){
   els.forEach(el=>io.observe(el));
 }
 
-fetch('content.json').then(r=>r.json()).then(c=>{render(c);animate()}).catch(err=>{
+// Slideshow gambar proyek: geser/panah/titik + otomatis tiap 5 detik (berhenti saat kursor di atasnya)
+function sliders(){
+  document.querySelectorAll('.slider').forEach(s=>{
+    const t=s.querySelector('.track'), n=t.children.length, dots=[...s.querySelectorAll('.dot')];
+    if(n<2)return;
+    const cur=()=>Math.round(t.scrollLeft/t.clientWidth);
+    const go=i=>t.scrollTo({left:((i%n+n)%n)*t.clientWidth,behavior:'smooth'});
+    t.onscroll=()=>dots.forEach((d,i)=>d.classList.toggle('on',i===cur()));
+    s.querySelector('.prev').onclick=()=>go(cur()-1);
+    s.querySelector('.next').onclick=()=>go(cur()+1);
+    dots.forEach((d,i)=>d.onclick=()=>go(i));
+    t.onscroll();
+    if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+      let hold=0; s.onmouseenter=()=>hold=1; s.onmouseleave=()=>hold=0;
+      setInterval(()=>hold||go(cur()+1),5000);
+    }
+  });
+}
+
+fetch('content.json').then(r=>r.json()).then(c=>{render(c);sliders();animate()}).catch(err=>{
   console.error(err);
   document.body.insertAdjacentHTML('afterbegin','<p style="padding:5rem 1rem 0;text-align:center">Konten gagal dimuat. Buka lewat Live Server atau hosting (bukan klik dua kali file).</p>');
 });

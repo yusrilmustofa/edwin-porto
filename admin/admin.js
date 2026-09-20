@@ -3,7 +3,7 @@ const $ = s => document.querySelector(s);
 const el = (t, c = '', h = '') => { const e = document.createElement(t); e.className = c; e.innerHTML = h; return e; };
 const LBL = { name: 'Nama', hero: 'Bagian Atas (Hero)', about: 'Tentang Saya', skills: 'Keahlian', projects: 'Portofolio', experience: 'Pengalaman & Pendidikan', contact: 'Kontak',
   greeting: 'Salam', headline: 'Headline', highlight: 'Kata berwarna hijau', description: 'Deskripsi', cta_portfolio: 'Teks tombol Portofolio', cta_contact: 'Teks tombol Kontak',
-  photo: 'Foto (kosongkan = huruf inisial)', title: 'Judul', intro: 'Pengantar', items: 'Daftar', text: 'Teks', hard: 'Hard Skills', soft: 'Soft Skills', note: 'Catatan kecil (opsional)',
+  photo: 'Foto (kosongkan = huruf inisial)', images: 'Gambar slideshow (bisa lebih dari satu)', title: 'Judul', intro: 'Pengantar', items: 'Daftar', text: 'Teks', hard: 'Hard Skills', soft: 'Soft Skills', note: 'Catatan kecil (opsional)',
   tag: 'Label kategori', role: 'Peran', impact: 'Dampak / hasil', period: 'Periode', desc: 'Keterangan', email: 'Email', linkedin: 'Link LinkedIn (https://...)', instagram: 'Link Instagram (https://...)', footer: 'Teks footer' };
 const lbl = k => LBL[k] || k;
 
@@ -30,7 +30,7 @@ const shrink = file => new Promise((res, rej) => {
 });
 
 // Form generik dari struktur JSON: string -> input, array -> daftar (tambah/hapus), object -> grup
-function node(obj, key, title) {
+function node(obj, key, title, up) {
   const v = obj[key], box = el('div');
   if (Array.isArray(v)) {
     const shape = v[0];
@@ -41,7 +41,7 @@ function node(obj, key, title) {
       v.forEach((it, i) => {
         const row = el('div', 'flex gap-3 items-start p-3 border rounded-lg bg-white');
         const body = el('div', 'flex-1 space-y-3');
-        if (it && typeof it === 'object') Object.keys(it).forEach(k => body.append(node(it, k, lbl(k)))); else body.append(node(v, i, ''));
+        if (it && typeof it === 'object') Object.keys(it).forEach(k => body.append(node(it, k, lbl(k)))); else body.append(node(v, i, '', key === 'images'));
         const del = el('button', 'text-red-600 text-sm shrink-0', 'Hapus'); del.type = 'button';
         del.onclick = () => { if (confirm('Hapus item ini?')) { v.splice(i, 1); draw(); } };
         row.append(body, del); list.append(row);
@@ -49,7 +49,7 @@ function node(obj, key, title) {
     };
     draw();
     const add = el('button', 'mt-2 text-emerald-700 text-sm font-semibold', '+ Tambah'); add.type = 'button';
-    add.onclick = () => { v.push(shape && typeof shape === 'object' ? Object.fromEntries(Object.keys(shape).map(k => [k, ''])) : ''); draw(); };
+    add.onclick = () => { v.push(shape && typeof shape === 'object' ? Object.fromEntries(Object.keys(shape).map(k => [k, Array.isArray(shape[k]) ? [] : ''])) : ''); draw(); };
     box.append(list, add);
   } else if (v && typeof v === 'object') {
     box.className = 'p-4 bg-white border rounded-xl space-y-3';
@@ -57,13 +57,14 @@ function node(obj, key, title) {
     Object.keys(v).forEach(k => box.append(node(v, k, lbl(k))));
   } else {
     if (title) box.append(el('label', 'block text-sm font-medium mb-1', title));
-    const long = key === 'photo' ? false : String(v).length > 40 || /description|text|intro|desc/.test(key);
+    const img = up || key === 'photo';
+    const long = img ? false : String(v).length > 40 || /description|text|intro|desc/.test(key);
     const inp = el(long ? 'textarea' : 'input', 'w-full rounded-lg border border-slate-300 px-3 py-2 bg-white');
     if (long) inp.rows = 3;
     inp.value = v ?? '';
     inp.oninput = () => { obj[key] = inp.value; };
     box.append(inp);
-    if (key === 'photo') {
+    if (img) {
       const f = el('input', 'mt-2 text-sm'); f.type = 'file'; f.accept = 'image/*';
       f.onchange = async () => {
         try {
@@ -81,6 +82,7 @@ function node(obj, key, title) {
 
 async function open() {
   data = await (await fetch('../content.json?' + Date.now())).json();
+  (data.projects?.items || []).forEach(p => p.images ??= []); // proyek lama belum punya daftar gambar
   const f = $('#form'); f.innerHTML = '';
   Object.keys(data).forEach(k => f.append(node(data, k, lbl(k))));
   $('#login').classList.add('hidden'); $('#editor').classList.remove('hidden');

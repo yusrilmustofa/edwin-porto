@@ -1,7 +1,7 @@
 // Endpoint admin: login + simpan content.json + upload foto ke repo GitHub.
 // Rahasia ada di Netlify env vars: ADMIN_USER, ADMIN_PASSWORD, GITHUB_TOKEN, GITHUB_REPO (user/repo), GITHUB_BRANCH (opsional)
 const crypto = require('crypto');
-const { ADMIN_USER, ADMIN_PASSWORD, GITHUB_TOKEN, GITHUB_REPO, GITHUB_BRANCH = 'main' } = process.env;
+const { ADMIN_USER, ADMIN_PASSWORD, GITHUB_TOKEN, GITHUB_REPO, GITHUB_BRANCH = 'master' } = process.env;
 
 const eq = (a, b) => {
   const x = Buffer.from(String(a)), y = Buffer.from(String(b));
