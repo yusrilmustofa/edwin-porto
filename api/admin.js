@@ -7,15 +7,25 @@ const eq = (a, b) => {
   const x = Buffer.from(String(a)), y = Buffer.from(String(b));
   return x.length === y.length && crypto.timingSafeEqual(x, y);
 };
-const gh = (path, opt = {}) => fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`, {
+const api = (p, opt = {}) => fetch(`https://api.github.com/repos/${GITHUB_REPO}/${p}`, {
   ...opt,
   headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, 'User-Agent': 'portfolio-admin', Accept: 'application/vnd.github+json' },
 });
-const put = async (path, b64, message) => {
-  const cur = await gh(`${path}?ref=${GITHUB_BRANCH}`);
-  const sha = cur.ok ? (await cur.json()).sha : undefined;
-  return gh(path, { method: 'PUT', body: JSON.stringify({ message, content: b64, branch: GITHUB_BRANCH, sha }) });
-};
+const j = async r => { if (!r.ok) throw new Error(`GitHub ${r.status}`); return r.json(); };
+const post = (p, body, method = 'POST') => api(p, { method, body: JSON.stringify(body) });
+
+// Banyak file sekaligus -> 1 commit (Git Data API): blob per file, tree baru, commit, geser branch.
+async function commitFiles(files, message) {
+  const head = (await j(await api(`git/ref/heads/${GITHUB_BRANCH}`))).object.sha;
+  const base = (await j(await api(`git/commits/${head}`))).tree.sha;
+  const tree = await Promise.all(files.map(async f => ({
+    path: f.path, mode: '100644', type: 'blob',
+    sha: (await j(await post('git/blobs', { content: f.b64, encoding: 'base64' }))).sha,
+  })));
+  const t = await j(await post('git/trees', { base_tree: base, tree }));
+  const c = await j(await post('git/commits', { message, tree: t.sha, parents: [head] }));
+  await j(await post(`git/refs/heads/${GITHUB_BRANCH}`, { sha: c.sha }, 'PATCH'));
+}
 
 module.exports = async (req, res) => {
   const reply = (code, body) => res.status(code).json(body);
@@ -31,16 +41,18 @@ module.exports = async (req, res) => {
   if (d.action === 'login') return reply(200, { ok: true });
 
   if (d.action === 'save') {
-    if (!d.content || typeof d.content !== 'object') return reply(400, { error: 'Konten kosong' });
-    const r = await put('content.json', Buffer.from(JSON.stringify(d.content, null, 2) + '\n').toString('base64'), 'Update konten via admin');
-    return r.ok ? reply(200, { ok: true }) : reply(502, { error: `Gagal menyimpan ke GitHub (${r.status})` });
-  }
-
-  if (d.action === 'upload') {
-    if (!/^[\w.-]+\.(jpe?g|png|webp|gif)$/i.test(d.name || '')) return reply(400, { error: 'Nama/tipe file tidak valid' });
-    if (!d.data || d.data.length > 4_000_000) return reply(400, { error: 'File terlalu besar' });
-    const r = await put(`images/${d.name}`, d.data, `Upload foto ${d.name}`);
-    return r.ok ? reply(200, { ok: true, path: `images/${d.name}` }) : reply(502, { error: `Gagal upload ke GitHub (${r.status})` });
+    const files = [];
+    for (const f of Array.isArray(d.files) ? d.files : []) {
+      if (!/^images\/[\w.-]+\.(jpe?g|png|webp|gif)$/i.test(f.path || '') || !f.data) return reply(400, { error: 'File gambar tidak valid' });
+      files.push({ path: f.path, b64: f.data });
+    }
+    if (d.content) {
+      if (typeof d.content !== 'object') return reply(400, { error: 'Konten tidak valid' });
+      files.push({ path: 'content.json', b64: Buffer.from(JSON.stringify(d.content, null, 2) + '\n').toString('base64') });
+    }
+    if (!files.length) return reply(400, { error: 'Tidak ada yang disimpan' });
+    try { await commitFiles(files, 'Update konten via admin'); return reply(200, { ok: true }); }
+    catch (e) { return reply(502, { error: `Gagal menyimpan ke GitHub (${e.message})` }); }
   }
 
   return reply(400, { error: 'Aksi tidak dikenal' });

@@ -56,14 +56,27 @@
     "items": [
       {
         "tag": "Media Edukasi",
-        "title": "Media Edukasi ",
-        "description": "E-Book, Video Interaktif, Leaflet, Poster, dan Infografis",
-        "role": "Media alat bantu edukasi visual dan cetak/digital untuk menyampaikan pesan secara efektif, menarik perhatian, dan mempermudah pemahaman sasaran.",
-        "impact": "Mudah dibawa pulang oleh sasaran edukasi, sehingga berpotensi dibaca ulang di rumah atau dibagikan ke anggota keluarga lain serta mendorong respons atau aksi segera dari pembaca karena informasinya bersifat aplikatif.",
-        "images": [
-          "",
-          ""
-        ]
+        "title": "E-Book Edukasi",
+        "description": "E-book kesehatan digital yang menyajikan informasi secara runtut, menarik, dan mudah dibaca kapan saja.",
+        "role": "Penyusun materi dan perancang tata letak.",
+        "impact": "Informasi kesehatan mudah diakses, dibaca ulang, dan dibagikan dalam bentuk digital.",
+        "images": []
+      },
+      {
+        "tag": "Media Edukasi",
+        "title": "Video Interaktif",
+        "description": "Video edukasi interaktif untuk menyampaikan pesan kesehatan secara visual dan mempermudah pemahaman sasaran.",
+        "role": "Perancang konten dan produksi video edukasi.",
+        "impact": "Pesan tersampaikan lebih menarik dan mudah dipahami oleh sasaran edukasi.",
+        "images": []
+      },
+      {
+        "tag": "Media Edukasi",
+        "title": "Leaflet, Poster & Infografis",
+        "description": "Media cetak dan digital yang menyampaikan pesan kesehatan secara efektif, menarik perhatian, dan mempermudah pemahaman.",
+        "role": "Perancang materi dan desainer visual.",
+        "impact": "Mudah dibawa pulang sasaran sehingga berpotensi dibaca ulang di rumah atau dibagikan ke keluarga, serta mendorong aksi karena informasinya aplikatif.",
+        "images": []
       },
       {
         "tag": "Pengabdian Masyarakat",
@@ -72,7 +85,11 @@
         "role": "Merencanakan program dan menjadi fasilitator kegiatan pemberdayaan masyarakat.",
         "impact": "Masyarakat mau dan mampu menjalankan program inovasi yang diberikan oleh RSUD Haji.",
         "images": [
-          "sertif"
+          "images/Sertifikat/1.png",
+          "images/Sertifikat/2.png",
+          "images/Sertifikat/3.png",
+          "images/Sertifikat/4.png",
+          "images/Sertifikat/5.png"
         ]
       }
     ]
