@@ -60,7 +60,12 @@
         "description": "E-book kesehatan digital yang menyajikan informasi secara runtut, menarik, dan mudah dibaca kapan saja.",
         "role": "Penyusun materi dan perancang tata letak.",
         "impact": "Informasi kesehatan mudah diakses, dibaca ulang, dan dibagikan dalam bentuk digital.",
-        "images": []
+        "images": [
+          "images/foto-1789957812900-0.jpg",
+          "images/foto-1789957857847-0.jpg",
+          "images/foto-1789957916343-0.jpg",
+          "images/foto-1789957922956-0.jpg"
+        ]
       },
       {
         "tag": "Media Edukasi",
@@ -76,7 +81,15 @@
         "description": "Media cetak dan digital yang menyampaikan pesan kesehatan secara efektif, menarik perhatian, dan mempermudah pemahaman.",
         "role": "Perancang materi dan desainer visual.",
         "impact": "Mudah dibawa pulang sasaran sehingga berpotensi dibaca ulang di rumah atau dibagikan ke keluarga, serta mendorong aksi karena informasinya aplikatif.",
-        "images": []
+        "images": [
+          "images/foto-1789957727531-0.jpg",
+          "images/foto-1789957738669-0.jpg",
+          "images/foto-1789957749648-0.jpg",
+          "images/foto-1789957749774-1.jpg",
+          "images/foto-1789957761799-0.jpg",
+          "images/foto-1789957941847-0.jpg",
+          "images/foto-1789957951792-0.jpg"
+        ]
       },
       {
         "tag": "Pengabdian Masyarakat",
