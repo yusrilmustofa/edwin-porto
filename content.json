@@ -88,7 +88,12 @@
           "images/foto-1789957749774-1.jpg",
           "images/foto-1789957761799-0.jpg",
           "images/foto-1789957941847-0.jpg",
-          "images/foto-1789957951792-0.jpg"
+          "images/foto-1789957951792-0.jpg",
+          "images/foto-1789972721690-0.jpg",
+          "images/foto-1789972731837-0.jpg",
+          "images/foto-1789972739181-0.jpg",
+          "images/foto-1789972755809-0.jpg",
+          "images/foto-1789972762132-0.jpg"
         ]
       },
       {
@@ -146,9 +151,19 @@
         "desc": "Dinas Kesehatan Kota Malang Bidang Kesehatan Masyarakat \n(Promosi Kesehatan dan Pemberdayaan Masyarakat)"
       },
       {
-        "period": "[Periode]",
-        "title": "[Organisasi / Kepanitiaan]",
-        "desc": "[Jabatan dan kontribusi]"
+        "period": "2024 - 2025",
+        "title": "Ketua Himpunan Prodi Promosi Kesehatan",
+        "desc": "Ketua Himpunan"
+      },
+      {
+        "period": "2024 - 2025",
+        "title": "Ketua PKKMB Jurusan Promosi Kesehatan",
+        "desc": "Ketua PKKMB 2024 - 2025"
+      },
+      {
+        "period": "2023 - 2024",
+        "title": "Wakil Ketua Himpunan Prodi Promosi Kesehatan",
+        "desc": "Wakil Ketua Himpunan"
       }
     ]
   },
